@@ -1,0 +1,213 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #F3F3F3;
+}
+
+/* Header */
+.encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  padding: 0 20px;
+  background-color: #212121;
+  color: #fafafa;
+}
+
+.encabezado h1 {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.encabezado nav ul {
+  list-style-type: none;
+}
+
+.encabezado nav ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.encabezado nav ul li a {
+  text-decoration: none;
+  color: #fafafa;
+  font-size: 1.2rem;
+}
+
+.boton {
+  background-color: #7AB730;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.boton:hover {
+  background-color: #28a745;
+}
+
+/* Banner */
+.banner {
+  background-image: url("../img/banner.jpg");
+  height: calc(100vh - 100px);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fafafa;
+  text-align: center;
+}
+
+.bannerContenido {
+  z-index: 1;
+}
+
+.bannerContenido h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.bannerContenido p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+/* Productos */
+.productos {
+  padding: 20px;
+}
+
+.productos h3 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.productos p {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contenedorProductos {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.producto {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.producto img {
+  width: 100%;
+  height: auto;
+  max-width: 300px;
+  border-radius: 5px;
+}
+
+/* Footer */
+.footer {
+  background-color: #212121;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.footerContenido {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer h4 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.infoContacto p {
+  margin: 5px 0;
+  font-size: 1.2rem;
+}
+
+.redesSociales a {
+  margin: 5px 0;
+  font-size: 1.2rem;
+  color: #7AB730;
+  text-decoration: none;
+  margin-right: 10px;
+  font-size: 1.5rem;
+}
+
+.redesSociales a:hover {
+  color: #28a745;
+}
+
+/* Media Queries para responsive design */
+@media only screen and (max-width: 600px) {
+  .encabezado {
+    height: 80px;
+    padding: 0 10px;
+  }
+  .encabezado h1 {
+    font-size: 1.5rem;
+  }
+  .encabezado nav ul li {
+    margin: 0 5px;
+  }
+  .encabezado nav ul li a {
+    font-size: 1rem;
+  }
+  .boton {
+    padding: 8px 15px;
+    font-size: 1rem;
+  }
+  .banner {
+    height: calc(100vh - 80px);
+  }
+  .bannerContenido h2 {
+    font-size: 1.5rem;
+  }
+  .bannerContenido p {
+    font-size: 1.2rem;
+  }
+  .productos {
+    padding: 15px;
+  }
+  .productos h3 {
+    font-size: 1.2rem;
+  }
+  .productos p {
+    font-size: 1rem;
+  }
+  .producto {
+    margin-bottom: 15px;
+  }
+  .producto img {
+    max-width: 200px;
+  }
+  .footer {
+    padding: 15px 0;
+  }
+  .footerContenido {
+    flex-direction: column;
+  }
+  .infoContacto p {
+    margin: 3px 0;
+  }
+  .redesSociales a {
+    margin: 3px 0;
+  }
+}

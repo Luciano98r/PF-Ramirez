@@ -1,0 +1,73 @@
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @mixin flex-row {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  @mixin input-style {
+    width: 90%;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  /* CONTACTO */
+  
+  /* FormularioContacto */
+  .formContacto {
+    width: 40vw;
+    height: auto;
+    background-color: #fafafa;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  
+    .contacto {
+      text-align: center;
+      background-color: #7AB730;
+      color: #fafafa;
+  
+      h1 {
+        text-transform: uppercase;
+        font-weight: bold;
+        padding: 15px;
+      }
+    }
+  
+    form {
+      padding: 20px;
+      @include flex-center;
+      flex-direction: column;
+  
+      div {
+        @include flex-row;
+      }
+  
+      input,
+      textarea {
+        @include input-style;
+      }
+    }
+  
+    .flex {
+      @include flex-row;
+      justify-content: center;
+  
+      button {
+        margin: 10px;
+        background-color: #7AB730;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+  
+        &:hover {
+          background-color: #5C9021;
+        }
+      }
+    }
+  }
+  

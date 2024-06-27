@@ -1,0 +1,15 @@
+{
+  "name": "lr",
+  "version": "1.0.0",
+  "description": "Descripción breve del proyecto.",
+  "main": "index.js",
+  "scripts": {
+  "sass": "sass",
+  "sass:watch": "sass --watch scss/main.scss css/main.css"
+},
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.77.6"
+  }
+}

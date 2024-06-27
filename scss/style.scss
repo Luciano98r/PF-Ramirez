@@ -1,0 +1,330 @@
+@mixin font-size($size) {
+  font-size: $size;
+}
+
+@mixin margin-bottom($size) {
+  margin-bottom: $size;
+}
+
+@mixin text-decoration-none() {
+  text-decoration: none;
+}
+
+@mixin list-style-none() {
+  list-style: none;
+}
+
+@mixin display-inline-block() {
+  display: inline-block;
+}
+
+@mixin text-align($align) {
+  text-align: $align;
+}
+
+@mixin font-weight($weight) {
+  font-weight: $weight;
+}
+
+@mixin font-style($style) {
+  font-style: $style;
+}
+
+@mixin background-color($color) {
+  background-color: $color;
+}
+
+@mixin padding($padding) {
+  padding: $padding;
+}
+
+@mixin width($width) {
+  width: $width;
+}
+
+@mixin position-sticky() {
+  position: sticky;
+}
+
+@mixin top($top) {
+  top: $top;
+}
+
+@mixin left($left) {
+  left: $left;
+}
+
+h1 {
+  @include font-size(2em);
+  @include margin-bottom(10px 0);
+}
+
+h2 {
+  @include font-size(1.8em);
+}
+
+p {
+  @include font-size(1.1em);
+  line-height: 1.3em;
+  @include font-weight(300);
+}
+
+nav {
+  @include background-color(#005eff);
+  @include padding(6px 30px);
+  @include width(100%);
+  @include position-sticky();
+  @include left(0);
+  @include top(0);
+}
+
+nav a {
+  @include text-decoration-none();
+}
+
+nav ul {
+  @include list-style-none();
+  @include display-inline-block();
+}
+
+nav ul li {
+  @include display-inline-block();
+  margin-right: 10px;
+}
+
+nav ul li a {
+  @include text-decoration-none();
+  color: white;
+  @include font-size(1.2em);
+  @include font-weight(300);
+}
+
+header img {
+  @include width(100%);
+}
+
+footer {
+  @include background-color(#005eff);
+  @include padding(8px 30px);
+}
+
+footer a {
+  @include text-decoration-none();
+}
+
+footer ul li {
+  @include list-style-type(none);
+}
+
+footer ul li a {
+  color: white;
+  @include text-decoration-none();
+  @include font-weight(300);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: #005eff;
+}
+
+.text-dark {
+  color: #626262;
+}
+
+.text-center {
+  @include text-align(center);
+}
+
+.text-left {
+  @include text-align(left);
+}
+
+.text-right {
+  @include text-align(right);
+}
+
+.text-italic {
+  @include font-style(italic);
+}
+
+.text-bold {
+  @include font-weight(600);
+}
+
+.container {
+  @include background-color(#ffc800);
+  @include width(90%);
+  height: auto;
+  overflow-y: auto;
+  margin: 20px auto;
+  @include padding(20px 30px);
+  border: solid 1px #b5b3b3;
+}
+
+.box-top {
+  @include padding(4px 0);
+  @include text-align(center);
+  color: gray;
+  @include font-size(0.9em);
+}
+
+/* Nuevas modificaciones */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #F3F3F3;
+}
+
+/* Header */
+.encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  padding: 0 20px;
+  background-color: #212121;
+  color: #fafafa;
+
+  h1 {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 2rem;
+  }
+
+  nav {
+    ul {
+      list-style-type: none;
+
+      li {
+        display: inline-block;
+        margin: 0 10px;
+
+        a {
+          text-decoration: none;
+          color: #fafafa;
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}
+
+.boton {
+  background-color: #7AB730;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #28a745;
+  }
+}
+
+/* Banner */
+.banner {
+  background-image: url("../img/banner.jpg");
+  height: calc(100vh - 100px);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fafafa;
+  text-align: center;
+
+  .bannerContenido {
+    h2 {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.productos {
+  padding: 20px;
+
+  h3 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  p {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .contenedorProductos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .producto {
+    text-align: center;
+    margin-bottom: 20px;
+
+    img {
+      width: 100%;
+      height: auto;
+      max-width: 300px;
+      border-radius: 5px;
+    }
+  }
+}
+
+.footer {
+  background-color: #212121;
+  color: #fff;
+  padding: 20px 0;
+
+  .footerContenido {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    h4 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .infoContacto {
+      p {
+        margin: 5px 0;
+        font-size: 1.2rem;
+      }
+    }
+
+    .redesSociales {
+      a {
+        margin: 5px 0;
+        font-size: 1.2rem;
+        color: #7AB730;
+        text-decoration: none;
+        margin-right: 10px;
+        font-size: 1.5rem;
+
+        &:hover {
+          color: #28a745;
+        }
+      }
+    }
+  }
+}
